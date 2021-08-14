@@ -68,9 +68,10 @@ class MainActivity : AppCompatActivity() {
 
         fun excluirDialog(activity: Activity, position: Int){
             var alertDialog = AlertDialog.Builder(this)
+            var wish = this@MainActivity.lista[position]
 
             alertDialog.setTitle("Excluir")
-            alertDialog.setMessage("Excluir item da lista?")
+            alertDialog.setMessage("Excluir " + wish.descricao + " da lista?")
 0
             alertDialog.setPositiveButton("Excluir") { _, _ ->
                 this@MainActivity.lista.removeAt(position)
